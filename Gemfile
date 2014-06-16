@@ -41,15 +41,21 @@ gem 'bcrypt', '~> 3.1.7'
 # This is for setting env variables without bash
 gem 'figaro'
 
+group :development, :test do
+  gem 'guard-cucumber', require: false
+end
+
 group :test do
+  gem 'spring-commands-rspec'
+  gem 'spring-commands-cucumber'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', require: false
   gem 'faker'
+  gem 'rb-fsevent' if `uname` =~ /Darwin/
+  gem 'selenium-webdriver'
 end
 
-group :development do
-  gem 'guard-cucumber'
-end
+
