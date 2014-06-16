@@ -1,0 +1,8 @@
+<% if @current_page.user && @current_page.user.id == session[:user_id] %>
+  <%= form_for @current_page, html: { class: 'edit_form' } do |f| %>
+    Title: <%= f.text_field :title %>
+    Description: <%= f.text_area :description %>
+    Public BTC Address: <%= f.text_field :publicBTC  %>
+  <% end %>
+<% else %>
+<% end %>

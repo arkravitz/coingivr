@@ -1,0 +1,5 @@
+<%= form_for :give_page, html: { class: "create_form" } do |f| %>
+  Title: <%= f.text_field :title %>
+  Description: <%= f.text_area :description %>
+  Public BTC Address: <%= f.text_field :publicBTC  %>
+<% end %>

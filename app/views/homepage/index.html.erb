@@ -1,0 +1,18 @@
+<% if not logged_in? %>
+  Login Form
+  <%= form_tag action: 'login_attempt', controller: 'sessions' do %>
+    <p>Username: <%= text_field_tag(:username) %></p>
+    <p>Password: <%= text_field_tag(:password) %></p>
+    <%= submit_tag('Login') %>
+  <% end %>
+<% end %>
+
+<%= link_to 'Create a Page', :new_give_page %>
+
+<% if !@featured.blank? %>
+  <% for item in @featured %>
+    <ul><%= item.title %></ul>
+  <% end %>
+<% else %>
+  No featured charities yet!
+<% end %>
