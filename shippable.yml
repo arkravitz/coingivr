@@ -6,4 +6,14 @@ rvm: 2.1.1
 
 before_script:
   - psql -c 'create database coingivr_test;' -U postgres
+  - mkdir -p shippable/testresults
+
+bundler_args: --binstubs
+
+
+script:
+  - bin/cucumber -f junit -o shippable/testresults/results.xml
+
+env:
+  - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
 

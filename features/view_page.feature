@@ -15,5 +15,5 @@ Feature: Viewing a page I created
     Given that I am logged in
     When I view a givepage I created
     And I edit the givepage's title to "This is an edit"
-    And I go to the homepage
+    And I am on the homepage
     Then I should see the title "This is an edit"

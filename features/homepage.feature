@@ -23,4 +23,4 @@ Feature: Home page
 
   Scenario: I should be able to sign up
     Given I am on the homepage
-    Then I should see the button "Sign Up"
+    Then I should be able to sign up

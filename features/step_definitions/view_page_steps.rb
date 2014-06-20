@@ -31,11 +31,3 @@ When /^I edit the givepage's title to "(.*?)"$/ do |title|
   fill_in "give_page_title", with: title
   click_on "Edit This Page"
 end
-
-Then /^the update should show on the main page$/ do
-  pending
-end
-
-When /^I go to the homepage$/ do
-  pending
-end

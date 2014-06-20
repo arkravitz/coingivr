@@ -36,3 +36,14 @@ Given /^I am on the homepage$/ do
   visit '/'
 end
 
+Then /^I should be able to sign up$/ do
+  expect do
+    user_attrs = FactoryGirl.attributes_for(:user)
+    fill_in "user_full_name", with: user_attrs[:full_name]
+    fill_in "user_username", with: user_attrs[:username]
+    fill_in "user_email", with: user_attrs[:email]
+    fill_in "user_password", with: user_attrs[:password]
+    fill_in "user_password_confirmation", with: user_attrs[:password]
+    click_on "Sign Up"
+  end.to change{User.count}.by(1)
+end
