@@ -7,13 +7,21 @@ rvm: 2.1.1
 before_script:
   - psql -c 'create database coingivr_test;' -U postgres
   - mkdir -p shippable/testresults
+  - mkdir -p shippable/codecoverage
 
 bundler_args: --binstubs
 
 
 script:
-  - bin/cucumber -f junit -o shippable/testresults
+  - COVERAGE=true bin/cucumber -f junit -o shippable/testresults
 
 env:
-  - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
-
+  - RAILS_ENV=test
+  - DISPLAY=:99.0
+  - CI_REPORTER=1
+  - CI_REPORTS=shippable/testresults
+  - COVERAGE_REPORTS=shippable/codecoverage
+  - SIMPLECOV=1
+  - COVERALLS=1
+  # COVERALLS_REPO_TOKEN should be secure
+  - secure: XhgWyyRPaTGpgheIzAInRy3DuqynPfEmXUc5CURqTh6DlSIba045FipC2zvXFaS/GUjO0nmyjrB0VlxDBIWnv2dnkTgn3I2zitt1E8MOzMxgZdRkl+uPXJOzmsH+733Xg+YXAobA+vhK/jDjhZyTKwlGWKX89hkVRmIuLLxkB8ep4mZRr9Y2R7fG54ka33WwAt+vLGcScv4sGKpCh8ImpakyJ4euFM3wMZc+XwH47YrXR4/uoSPYK7Tc525War0ea2rv7OshoI+ipDpfDYNcZpJbIO8Mhljj0jUMyZz0Gk6uHBvnL2Majmkax5mf3HV4pRdP/Yl0hDGpmbYc5orGaA==
