@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'sessions/login'
 
   root 'homepage#index'
+  post 'sign_up' => 'homepage#sign_up'
 
   post 'login_attempt/' => 'sessions#login_attempt'
 

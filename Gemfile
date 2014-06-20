@@ -56,6 +56,7 @@ group :test do
   gem 'faker'
   gem 'rb-fsevent' if `uname` =~ /Darwin/
   gem 'selenium-webdriver'
+  gem 'simplecov', require: false
 end
 
 

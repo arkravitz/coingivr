@@ -1,0 +1,6 @@
+build_environment: Ubuntu 12.04
+# language setting
+language: ruby
+
+rvm: 2.1.1p76
+

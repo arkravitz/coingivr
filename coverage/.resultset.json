@@ -1,0 +1,119 @@
+{
+  "Cucumber Features": {
+    "coverage": {
+      "/Users/akravitz/code/coingivr/app/models/user.rb": [
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/akravitz/code/coingivr/app/models/give_page.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/akravitz/code/coingivr/app/controllers/homepage_controller.rb": [
+        1,
+        1,
+        13,
+        13,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/akravitz/code/coingivr/app/helpers/application_helper.rb": [
+        1,
+        1,
+        13,
+        6,
+        null,
+        7,
+        null,
+        null,
+        null
+      ],
+      "/Users/akravitz/code/coingivr/app/helpers/sessions_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/akravitz/code/coingivr/app/controllers/sessions_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        5,
+        5,
+        5,
+        5,
+        5,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/akravitz/code/coingivr/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/akravitz/code/coingivr/app/controllers/give_page_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        3,
+        3,
+        2,
+        1,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        2,
+        2,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1403152693
+  }
+}

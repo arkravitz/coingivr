@@ -1,3 +1,4 @@
+
 <% if not logged_in? %>
   Login Form
   <%= form_tag action: 'login_attempt', controller: 'sessions' do %>
@@ -5,7 +6,28 @@
     <p>Password: <%= text_field_tag(:password) %></p>
     <%= submit_tag('Login') %>
   <% end %>
+
+  <%= form_for @new_user, url: { action: 'sign_up' } do |f| %>
+    <%= f.label :full_name, "Full Name" %>
+    <%= f.text_field :full_name %>
+
+    <%= f.label :username, "Username" %>
+    <%= f.text_field :username %>
+
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.label :password_confirmation, "Confirmation" %>
+    <%= f.password_field :password_confirmation %>
+
+    <%= f.submit "Sign Up", class: "btn btn-large btn-primary" %>
+  <% end %>
 <% end %>
+
+
 
 <%= link_to 'Create a Page', :new_give_page %>
 

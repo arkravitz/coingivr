@@ -20,3 +20,7 @@ Feature: Home page
     And I am on the homepage
     When I login
     Then I should be logged in
+
+  Scenario: I should be able to sign up
+    Given I am on the homepage
+    Then I should see the button "Sign Up"

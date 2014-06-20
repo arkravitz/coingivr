@@ -4,7 +4,9 @@ class GivePageController < ApplicationController
 
   def show
     @current_page = GivePage.find_by_id(params[:id])
-    if !@current_page
+    if session[:user_id] && @current_page.user.id == session[:user_id]
+      redirect_to action: 'edit'
+    elsif !@current_page
       redirect_to root_path
     end
   end
@@ -16,6 +18,10 @@ class GivePageController < ApplicationController
   end
 
   def edit
+    @current_page = GivePage.find_by_id(params[:id])
+    if !(session[:user_id] && @current_page.user.id == session[:user_id])
+      redirect_to action: 'show'
+    end
   end
 
   def update
