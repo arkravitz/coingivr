@@ -12,7 +12,7 @@ bundler_args: --binstubs
 
 
 script:
-  - bin/cucumber -f junit -o shippable/testresults/results.xml
+  - bin/cucumber -f junit -o shippable/testresults
 
 env:
   - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
