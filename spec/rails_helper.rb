@@ -1,3 +1,12 @@
+require 'simplecov'
+SimpleCov.start 'rails'
+if ENV["COVERAGE_REPORTS"]
+  # for Sippable
+  require 'simplecov-csv'
+  SimpleCov.formatter = SimpleCov::Formatter::CSVFormatter
+  SimpleCov.coverage_dir(ENV["COVERAGE_REPORTS"])
+end
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
 require 'spec_helper'

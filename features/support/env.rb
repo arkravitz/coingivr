@@ -9,6 +9,12 @@ require 'cucumber/rails'
 
 # coverage
 require 'simplecov'
+if ENV["COVERAGE_REPORTS"]
+  # for Sippable
+  require 'simplecov-csv'
+  SimpleCov.formatter = SimpleCov::Formatter::CSVFormatter
+  SimpleCov.coverage_dir(ENV["COVERAGE_REPORTS"])
+end
 SimpleCov.start 'rails'
 
 # Capybara defaults to CSS3 selectors rather than XPath.
